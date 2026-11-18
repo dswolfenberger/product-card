@@ -17,6 +17,6 @@ import { products } from './data/products'
     />
   </div>
   <div class="section">
-    <h4>Type Shi</h4>
+    <h4>Other Stuff</h4>
   </div>
 </template>
