@@ -1,31 +1,22 @@
 <script setup lang="ts">
 import ProductCard from './components/productCard.vue'
-import { products } from './components/productName'
+import { products } from './data/products'
 </script>
 
 <template>
-  <h1 class="primary-title">Upgrade Your Station</h1>
-  <div class="product-card--grid">
-    <ProductCard v-for="product in products" :key="product.id" :name="product.name"/>
+  <div class="site-header">
+    <h1>Products</h1>
+  </div>
+  <h2 class="primary-title">Upgrade Your Station</h2>
+  <div class="product-card--grid" role="region" aria-label="Products">
+    <ProductCard
+      v-for="product in products"
+      :key="product.id"
+      :name="product.name"
+      :price="product.price"
+    />
+  </div>
+  <div class="section">
+    <h4>Type Shi</h4>
   </div>
 </template>
-
-<style>
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 10rem;
-}
-
-.product-card--grid {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-}
-
-.primary-title {
-  max-width: 50%;
-}
-</style>
